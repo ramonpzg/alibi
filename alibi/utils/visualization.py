@@ -196,6 +196,7 @@ def visualize_image_attr(
     heat_map = None
     # Show original image
     if ImageVisualizationMethod[method] == ImageVisualizationMethod.original_image:
+        assert original_image is not None
         plt_axis.imshow(original_image)
     else:
         # Choose appropriate signed attributions and normalize.
@@ -354,7 +355,7 @@ def _create_heatmap(data: np.ndarray,
     plt.setp(ax.get_xticklabels(), rotation=90, ha="right", rotation_mode="anchor")
 
     # turn spines off and create white grid.
-    ax.spines[:].set_visible(False)  # type: ignore[call-overload]
+    ax.spines[:].set_visible(False)
 
     ax.set_xticks(np.arange(data.shape[1]+1)-.5, minor=True)
     ax.set_yticks(np.arange(data.shape[0]+1)-.5, minor=True)

@@ -13,17 +13,17 @@ extras_require = {
     'ray': ['ray>=0.8.7, <3.0.0'],
     # shap is separated due to build issues, see https://github.com/slundberg/shap/pull/1802
     'shap': [
-        'shap>=0.40.0, <0.43.0',  # versioning: https://github.com/SeldonIO/alibi/issues/333
-        'numba>=0.50.0, !=0.54.0, <0.58.0',  # Avoid 0.54 due to: https://github.com/SeldonIO/alibi/issues/466
+        'shap>=0.40.0, <0.44.0',  # versioning: https://github.com/SeldonIO/alibi/issues/333
+        'numba>=0.50.0, !=0.54.0, <0.60.0',  # Avoid 0.54 due to: https://github.com/SeldonIO/alibi/issues/466
     ],
 
-    'tensorflow': ['tensorflow>=2.0.0, !=2.6.0, !=2.6.1, <2.14.0'],
+    'tensorflow': ['tensorflow>=2.0.0, !=2.6.0, !=2.6.1, <2.15.0'],
     'torch': ['torch>=1.9.0, <3.0.0'],
     'all': [
         'ray>=0.8.7, <3.0.0',
-        'shap>=0.40.0, <0.43.0',
-        'numba>=0.50.0, !=0.54.0, <0.58.0',
-        'tensorflow>=2.0.0, !=2.6.0, !=2.6.1, <2.14.0',
+        'shap>=0.40.0, <0.44.0',
+        'numba>=0.50.0, !=0.54.0, <0.60.0',
+        'tensorflow>=2.0.0, !=2.6.0, !=2.6.1, <2.15.0',
         'torch>=1.9.0, <3.0.0'
     ]
 }
@@ -37,7 +37,7 @@ if __name__ == '__main__':
           long_description=readme(),
           long_description_content_type='text/markdown',
           url='https://github.com/SeldonIO/alibi',
-          license="Apache 2.0",
+          license="Business Source License 1.1",
           packages=find_packages(),
           include_package_data=True,
           python_requires='>=3.8',
@@ -48,7 +48,7 @@ if __name__ == '__main__':
               'scikit-learn>=1.0.0, <2.0.0',
               'spacy[lookups]>=2.0.0, <4.0.0',
               'blis<0.8.0',  # Windows memory issues https://github.com/explosion/thinc/issues/771
-              'scikit-image>=0.17.2, <0.22',  # introduced `start_label` argument for `slic`
+              'scikit-image>=0.17.2, <0.23',  # introduced `start_label` argument for `slic`
               'requests>=2.21.0, <3.0.0',
               'Pillow>=5.4.1, <11.0',
               'attrs>=19.2.0, <24.0.0',
@@ -70,6 +70,6 @@ if __name__ == '__main__':
               "Programming Language :: Python :: 3.9",
               "Programming Language :: Python :: 3.10",
               "Programming Language :: Python :: 3.11",
-              "License :: OSI Approved :: Apache Software License",
+              "License :: Other/Proprietary License",
               "Topic :: Scientific/Engineering",
           ])
